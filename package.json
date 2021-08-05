@@ -1,0 +1,31 @@
+{
+  "name": "instaclone",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev --preview-feature"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SangBeom-Lee/Instaclone-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SangBeom-Lee/Instaclone-backend/issues"
+  },
+  "homepage": "https://github.com/SangBeom-Lee/Instaclone-backend#readme",
+  "dependencies": {
+    "@prisma/client": "^2.28.0",
+    "apollo-server": "^3.1.2",
+    "graphql": "^15.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.14.9",
+    "nodemon": "^2.0.12"
+  }
+}
