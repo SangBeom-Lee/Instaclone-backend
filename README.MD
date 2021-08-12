@@ -6,10 +6,11 @@
 ## ADD  Module
 ## Node start : Nodemon
 ## Js complier : Babel
+## Hash : bcrypt
 
 ## User : 
- - [ ] Create Account
- - [ ] See Profile
+ - [O] Create Account
+ - [O] See Profile
  - [ ] Login
  - [ ] Edit Profile
  - [ ] Follow User
