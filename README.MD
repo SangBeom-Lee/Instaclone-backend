@@ -11,8 +11,21 @@
 ## User : 
  - [O] Create Account
  - [O] See Profile
- - [ ] Login
+ - [O] Login
  - [ ] Edit Profile
+ - [ ] Change Avatar (Image Upload)
  - [ ] Follow User
  - [ ] Unfollow User
- - [ ] Change Avatar (Image Upload)
+ - [ ] Search Users
+ - [ ] See Followers
+ - [ ] See Following
+
+ ## Photo
+ - [ ] See Photo
+ - [ ] Upload Photo
+ - [ ] Edit Photo
+ - [ ] Like / Unlike Photo
+ - [ ] See Photo Likes
+ - [ ] See Feed
+ - [ ] Search Photos
+ - [ ] See Hashtags

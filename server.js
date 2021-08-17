@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 import {ApolloServer, gql} from "apollo-server";
 import schema from "./schema";
 
