@@ -1,12 +1,18 @@
 require("dotenv").config();
 
-import {ApolloServer, gql} from "apollo-server";
+import {ApolloServer} from "apollo-server";
 import schema from "./schema";
-
-const server                                        = new ApolloServer({
-    schema
-});
+import { getUser } from "./users/users.utils";
+import { async } from "regenerator-runtime";
 
 const PORT                                          = process.env.PORT;
+const server                                        = new ApolloServer({
+    schema,
+    context                                         : async ({req}) => {
+        return {
+            loginUser                               : await getUser(req.headers.token)
+        }
+    }
+});
 
 server.listen(PORT).then(() => console.log(`Server is running on http://localhost:${PORT}/`));
