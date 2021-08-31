@@ -3,6 +3,7 @@ import bcrypt from "bcrypt";
 import { async } from "regenerator-runtime";
 import Jwt from "jsonwebtoken";
 import { protectResolver } from "../users.utils";
+import { GraphQLUpload } from "graphql-upload";
 
 const resolverFn                                    = async (_, {
     firstName,
@@ -10,10 +11,11 @@ const resolverFn                                    = async (_, {
     userName,
     email,
     password                                        : newPassword,
-    bio
+    bio,
+    avatar
 },
-{loginUser, protectResolver}) => {
-    protectResolver(loginUser);
+{loginUser}) => {
+    console.log(avatar);
 
     let uglyPassword                                = null;
     if(newPassword){
@@ -43,6 +45,8 @@ const resolverFn                                    = async (_, {
 };
 
 export default {
+    Upload                                          : GraphQLUpload,
+
     Mutation                                        : {
         editProfile                                 : protectResolver(resolverFn)
     }
